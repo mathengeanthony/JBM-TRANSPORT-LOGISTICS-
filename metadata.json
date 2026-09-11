@@ -1,0 +1,8 @@
+{
+  "name": "JBM TRANSPORT \u0026 LOGISTICS ",
+  "description": "Transport and logistics exellence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
