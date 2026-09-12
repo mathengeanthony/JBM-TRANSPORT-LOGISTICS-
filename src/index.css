@@ -91,7 +91,6 @@
 }
 
 /* --- LEAFLET MAP & HUD --- */
-html.dark .leaflet-layer { filter: contrast(1.1) brightness(1.5) grayscale(0%) saturate(100%); }
 .leaflet-control-attribution { display: none; }
 .custom-star-icon { background: transparent; border: none; }
 
@@ -306,3 +305,12 @@ html:not(.dark) .footer-brand-anchor:hover { color: #1a1a1a; }
   scrollbar-width: none;
 }
 
+
+
+/* --- CUSTOM OSM MAP STYLING --- */
+.leaflet-layer { 
+  filter: grayscale(100%) opacity(70%) brightness(1.1) contrast(95%); 
+}
+html.dark .leaflet-layer { 
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%) grayscale(80%); 
+}

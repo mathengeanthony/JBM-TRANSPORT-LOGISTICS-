@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        .map-light .leaflet-layer {
+            filter: grayscale(100%) opacity(70%) brightness(1.1) contrast(90%);
+        }
+        .map-dark {
+            background-color: #1a1a1a;
+        }
+        .map-dark .leaflet-layer {
+            filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%) grayscale(80%);
+        }
+    </style>
+</head>
+<body style="display: flex;">
+    <div id="mapLight" class="map-light" style="width: 400px; height: 400px; background: #f8f8f8;"></div>
+    <div id="mapDark" class="map-dark" style="width: 400px; height: 400px; margin-left: 10px;"></div>
+    <script>
+        var url = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}';
+        var mapL = L.map('mapLight').setView([40.7128, -74.0060], 12);
+        L.tileLayer(url, { maxZoom: 19 }).addTo(mapL);
+
+        var mapD = L.map('mapDark').setView([40.7128, -74.0060], 12);
+        L.tileLayer(url, { maxZoom: 19 }).addTo(mapD);
+    </script>
+</body>
+</html>
