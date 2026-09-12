@@ -1,3 +1,5 @@
+#!/bin/bash
+cat << 'INNER' > src/pages/HomePage.tsx
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { SectionMap } from "../components/SectionMap";
@@ -65,3 +67,4 @@ export function HomePage() {
     </>
   );
 }
+INNER

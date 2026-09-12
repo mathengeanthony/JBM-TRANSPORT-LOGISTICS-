@@ -174,7 +174,8 @@ export function RateEnginePage() {
                 <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest truncate">
                   {activeScope === 'kenya' && "Kenyan Transport Knowledge"}
                   {activeScope === 'eac' && "EAC Cross Border Knowledge"}
-                  {(activeScope === 'sadc' || activeScope === 'global') && "Global Imports Knowledge"}
+                  {activeScope === 'sadc' && "SADC Transport Knowledge"}
+                  {activeScope === 'global' && "Global Imports Knowledge"}
                 </span>
               </div>
               <i className="fa-solid fa-arrow-right -rotate-45 text-[10px] opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all shrink-0 ml-2"></i>

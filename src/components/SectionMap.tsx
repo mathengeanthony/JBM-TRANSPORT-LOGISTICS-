@@ -62,9 +62,9 @@ export function SectionMap({ onMenuClick }: { onMenuClick: () => void }) {
       attributionControl: false,
     }).setView([-1.2921, 36.8219], 13);
 
-    const cartoApiKey = import.meta.env.VITE_CARTO_API_KEY || "eyJhbGciOiJIUzI1NiJ9.eyJhIjoiYWNfMnU2eTA1dzYiLCJqdGkiOiJjMGZjZTI5NCJ9.nczTAZvhXoqsx4fkSTlVWUGvwMprj_wweSDCMHoxfCk";
+    const cartoApiKey = import.meta.env.VITE_CARTO_API_KEY;
 
-    L.tileLayer(`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${cartoApiKey}`, {
+    L.tileLayer(`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png${cartoApiKey ? `?key=${cartoApiKey}` : ""}`, {
       maxZoom: 18,
     }).addTo(map);
 

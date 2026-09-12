@@ -8,6 +8,7 @@ import { VehicleDetailPage } from "./pages/VehicleDetailPage";
 import { WarehousePage } from "./pages/WarehousePage";
 import { WarehouseDetailPage } from "./pages/WarehouseDetailPage";
 import { RateEnginePage } from "./pages/RateEnginePage";
+import { LogisticsDashboardPage } from "./pages/LogisticsDashboardPage";
 import { TradeAdvisoryPage } from "./pages/TradeAdvisoryPage";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/warehousing" element={<WarehousePage />} />
         <Route path="/warehousing/:id" element={<WarehouseDetailPage />} />
         <Route path="/rates" element={<RateEnginePage />} />
+        <Route path="/dashboard" element={<LogisticsDashboardPage />} />
         <Route path="/advisory" element={<TradeAdvisoryPage />} />
         <Route path="/compliance" element={<CompliancePage />} />
         <Route path="/ethos" element={<EthosPage />} />

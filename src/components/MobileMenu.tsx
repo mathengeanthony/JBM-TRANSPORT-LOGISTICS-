@@ -112,7 +112,6 @@ export function MobileMenu({
               </span>
               <span>Rate Engine</span>
             </Link>
-            
             <Link
               to="/advisory"
               className="group flex items-center gap-4 text-2xl md:text-3xl font-extrabold uppercase tracking-tight text-white hover:text-orange-500 transition-colors"

@@ -107,11 +107,11 @@ export function SectionCommercial({ onMenuClick }: { onMenuClick: () => void }) 
                 className="w-full h-full bg-[#f8f8f8] dark:bg-[#1a1a1a] z-0"
               >
                 <TileLayer
-                  url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                  url={`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png${import.meta.env.VITE_CARTO_API_KEY ? `?key=${import.meta.env.VITE_CARTO_API_KEY}` : ""}`}
                   className="dark:hidden"
                 />
                 <TileLayer
-                  url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                  url={`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png${import.meta.env.VITE_CARTO_API_KEY ? `?key=${import.meta.env.VITE_CARTO_API_KEY}` : ""}`}
                   className="hidden dark:block"
                 />
                 {markers.map((m, i) => (
